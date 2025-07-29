@@ -1,0 +1,76 @@
+<!-- Bootstrap 5.3.3 CSS -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+<!-- Bootstrap JS + Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Glass Effect Custom CSS -->
+<style>
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 10px;
+    padding: 8px 16px;
+  }
+
+  .nav-link {
+    color: #1a1a1a !important;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #007b5e !important;
+    text-decoration: underline;
+  }
+
+  .navbar-brand img {
+    border-radius: 10px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Fix extra spacing on small screens */
+  /* html, body {
+    width: 100%;
+    max-width: 100%;
+  } */
+</style>
+
+<!-- GLASS NAVBAR -->
+<nav class="navbar navbar-expand-lg glass-navbar fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="BVM_logo.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.php">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="track_1.php">Tracks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="FAQs.php">FAQs</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

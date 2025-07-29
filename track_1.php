@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Track - IDEATHON</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #3b4cb8 0%, #7b1fa2 25%, #e91e63 50%, #ff5722 75%, #2196f3 100%);
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+             margin-top: 10vh;
+        }
+
+        .card-container {
+            flex: 1 1 300px;
+            max-width: 300px;
+            margin: 10px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 360px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-front,
+        .flip-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .flip-back {
+            transform: rotateY(180deg);
+        }
+
+        .problem-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .problem-number {
+            font-size: 1.5rem;
+            color: #007f5f;
+            font-weight: 600;
+        }
+
+        .problem-title {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 1rem;
+        }
+
+        .contact-heading {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #007f5f;
+        }
+
+        @media screen and (max-width: 600px) {
+            .cards-wrapper {
+                flex-direction: column;
+                align-items: center;
+                 margin-top: 10vh;
+            }
+
+            .card-container {
+                max-width: 95%;
+                width: 100%;
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <?php
+    include("navbar.php");
+    ?>
+    <div class="cards-wrapper">
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 1</h2>
+                            <p class="problem-title">Water Conservation Techniques</p>
+                            <p>(click for more info)</p>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Address water leakage and wastage by developing a system to monitor and control
+                            water usage, ensuring taps are not left open unnecessarily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 2</h2>
+                            <p class="problem-title">Plastic Waste management</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Utilize plastic waste in bituminous road construction to create a water-repellent
+                            layer, reducing the impact of water logging on roads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 3</h2>
+                            <p class="problem-title">Electrify the Campus: Provision for Two-Wheeler EV Charging</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Possibilities of Provision for two wheeler Charging facility on Campus
+                            Exploring on- campus two-wheeler charging facility to accommodate the growing
+                            popularity of electric vehicles. Enabling students, staff, and visitors to charge their
+                            electric scooters or bikes conveniently on campus, promoting sustainability and
+                            reducing carbon emissions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 4</h2>
+                            <p class="problem-title">Off-Hours, Off-Power: Energy Optimization in Campus Labs</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Auto Power cut-off facility in Department Laboratories During Off College Hours
+                            Implementing an auto power cut-off system in department laboratories during off-
+                            college hours to optimize energy consumption. This system automatically shuts
+                            down electrical equipment and lighting, reducing unnecessary energy usage, and
+                            promoting sustainability. Cost-effective and environmentally friendly, the initiative contributes to the institution's green practices and energy efficiency efforts.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 5</h2>
+                            <p class="problem-title">Smart Institute information display system</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>The general notice and information regarding the institute or premises or staff
+                            members or exam hall information is sometimes not mentioned or circulated
+                            properly. So many times, students or visitors face difficulty locating a place within
+                            the premises or finding a particular person’s office and precious time is lost in
+                            doing so. A lot of paperwork is also needed to circulate the notice every time an
+                            event or seminars are scheduled in educational institutes.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 6</h2>
+                            <p class="problem-title">Futuristic Education</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>In the Indian context, the education system is at a pivotal juncture, with rapid
+                            advancements in technology and changing societal needs. The conventional
+                            methods of teaching and learning are facing challenges in keeping up with the
+                            demands of the future. This Ideathon aims to address the pressing issue of
+                            'Futuristic Education in Indian Perspective.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 7</h2>
+                            <p class="problem-title">Smart Vidyanagar</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Smart Vidyanagar challenges participants to develop IT solutions that
+                            revolutionize education by integrating advanced technologies for enhanced
+                            learning environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 8</h2>
+                            <p class="problem-title">Stair Climbing Trolley</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>The mechanism uses a trolley with a support wheel arrangement which will be
+                            used for support when at rest and will be suspended in air while the trolley is
+                            moved by lifting it. The interlinked wheel mechanism consists of 3 freely moving
+                            wheels. These wheels are connected to a connecting rod.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 9</h2>
+                            <p class="problem-title">Floor Cleaning Robot</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>The aim of this project work is to develop and modernized process for cleaning the
+                            floor with wet and dry and obstacle detection. Usually, robots of this kind can cost
+                            more making it an unaffordable choice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 10</h2>
+                            <p class="problem-title">Energy conservation by energy consumption monitoring</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Energy consumption monitoring helps in reducing energy costs by identifying and
+                            eliminating unnecessary energy consumption. This can lead to significant financial
+                            savings. It also helps in lower carbon footprints, contributing to a more sustainable
+                            and eco-friendlier environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 11</h2>
+                            <p class="problem-title">Smart Digital library system</p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>The main problem is to record the entry and exit of all stakeholders and the books
+                            and publication issued and returned by this system.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div class="problem-info">
+                            <h2 class="problem-number">Track 12</h2>
+                            <p class="problem-title">Advance PA system for sector (Improved projectors and digital notice
+                                boards)
+                            </p>
+                            <p>(click for more info)</p>
+
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Class we have RS232 connector to connect it to the projector. RS232 is outdated
+                            and faculties face problems in connecting their laptop with projector and which is
+                            time consuming. Paperwork becomes tedious and also has many loopholes like old
+                            notices are not updated or removed after the deadline. College websites cannot be
+                            accessed without internet connection which can be overcome by this digital notice
+                            board.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ideathon FAQs</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #3b4cb8 0%, #7b1fa2 25%, #e91e63 50%, #ff5722 75%, #2196f3 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            color: #333;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+             margin-top: 15vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 15px;
+        }
+
+        .faq-answer p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 15px;
+        }
+
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "−";
+            transform: rotate(180deg);
+        }
+
+        .contact-box {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+            color: #f0f0f0;
+        }
+
+        .contact-heading {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            .faq-container {
+                margin: 30px 15px;
+                padding: 20px;
+                margin-top: 15vh;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <?php include("navbar.php"); ?>
+
+    <div class="faq-container">
+        <h1>Ideathon 2025 – FAQs</h1>
+
+        <div class="faq-item">
+            <div class="faq-question">Who can participate in Ideathon?</div>
+            <div class="faq-answer">
+                <p>Only first-year students of our college are eligible to participate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is team participation mandatory?</div>
+            <div class="faq-answer">
+                <p>Yes, forming a team of 8 members is compulsory.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Are there any rules for team composition?</div>
+            <div class="faq-answer">
+                <p>Each team must include at least 1 girl member.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do we need prior coding knowledge?</div>
+            <div class="faq-answer">
+                <p>No, it’s open to all. Diverse skillsets are encouraged – from design to pitching.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Will there be any mentorship provided?</div>
+            <div class="faq-answer">
+                <p>Yes! Mentors will be available throughout the event to guide and support you.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Where can we register?</div>
+            <div class="faq-answer">
+                <p>The registration form is available on the event’s home page.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Will there be prizes for winners?</div>
+            <div class="faq-answer">
+                <p>Yes! Winners will receive exciting prizes and recognition.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is there a participation certificate?</div>
+            <div class="faq-answer">
+                <p>Yes, all registered participants will receive a certificate of participation.</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <p class="contact-heading">❓ Got more questions? </p>
+            <p class="contact-heading">📞 Contact:  </p>
+            <p> <strong>Harsh Vala</strong>  <a class="text-white" href="tel:+918209868567">+91 82098 68567</a></p>
+            <p><strong>Meet Dhola</strong>  <a class="text-white"  href="tel:+918320205281">+91 83202 05281</a></p>
+            <p><strong>Mantra Shukla</strong>  <a class="text-white" href="tel:+919510979220">+91 95109 79220</a></p>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll(".faq-item");
+
+        items.forEach(item => {
+            const question = item.querySelector(".faq-question");
+            question.addEventListener("click", () => {
+                item.classList.toggle("active");
+                items.forEach(i => {
+                    if (i !== item) i.classList.remove("active");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
